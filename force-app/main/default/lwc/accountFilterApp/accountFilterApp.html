@@ -1,0 +1,72 @@
+<template>
+    <lightning-card class="slds-m-around_medium">
+     <div class="slds-box slds-box_small">  
+    <lightning-card title="Account Filter">
+        <div class="slds-size_3-of-3">
+            <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+        <div class="slds-m-around_x-small slds-grid">
+            <lightning-combobox label="Industry" name="industry" options={industryOptions}
+                class="slds-p-around_x-small industry-searchbox"></lightning-combobox>
+            <lightning-input type="text" class="slds-p-around_medium name-searchbox"
+                placeholder="Enter Name of the Account" style="width: 80%;"></lightning-input>
+            <lightning-button class="slds-m-top_x-large slds-m-bottom_medium slds-p-right_x-small" variant="brand"
+                label="Search" icon-name="utility:search" icon-position="left" onclick={handleSearch}>
+            </lightning-button>
+        </div>
+        
+      </div>
+    </div>
+    </lightning-card>
+
+    <div class="slds-size_3-of-3">
+      <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+      <p style="color: red;">Display the Details</p>
+    <template for:each={listOfAccounts} for:item="account">
+        <lightning-card key={account.Id}>
+            <div class="slds-m-around_x-small slds-p-around_x-small slds-grid">
+                <div class="slds-m-around_x-small slds-p-top_medium" style="width: 20%;">
+                    <img src={account.Industry_Image__c} class="cstm-img" alt="image" />
+                </div>   
+                <div class="slds-box slds-m-around_x-small" style="width: 60%; box-shadow: 2px 3px #888888;">
+                    <lightning-record-view-form record-id={account.Id} object-api-name="Account" class="slds-form">
+                        <div class="slds-grid slds-m-around_x-small">
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning-output-field field-name="Name"></lightning-output-field>
+                                <lightning-output-field field-name="AnnualRevenue"></lightning-output-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning-output-field field-name="Website"></lightning-output-field>
+                                <lightning-output-field field-name="Phone"></lightning-output-field>
+                            </div>
+                            <div class="slds-col slds-size_1-of-3">
+                                <lightning-output-field field-name="Industry"></lightning-output-field>
+                            </div>
+                        </div>
+                    </lightning-record-view-form>
+                </div>
+               
+
+
+            </div>
+        
+        </lightning-card>
+        </template>
+        
+        <!--<div class="slds-size_1-of-4">    
+           <span class="slds-avatar slds-avatar_circle slds-avatar_large" style=height:100px;width:100px;>
+            <abbr class="slds-avatar__initials slds-icon-standard-user" title="person name">
+                <img src={img3} style= height:100px; alt="static"/>
+            </abbr>
+        </span> 
+      </div>-->
+     </div>
+    </div>
+ </div>
+
+
+ 
+</lightning-card>
+
+
+     
+</template>

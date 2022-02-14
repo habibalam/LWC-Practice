@@ -1,0 +1,19 @@
+<template>
+    <div class='slds-card slds-p-around_medium'>
+        <p>{welcome}</p>
+
+      <label class='slds-text-heading_medium'>Tile</label>
+        <input type="text" class='slds-input' name="Title" onkeyup={handleactions}>
+                                                         
+        <label class='slds-text-heading_medium'>Message</label>
+         <input type="text" class='slds-input' name="Message" onkeyup={handleactions}>
+
+          <label class='slds-text-heading_medium'>variant</label>
+          <input type="text" class='slds-input' name="variant" onkeyup={handleactions}>
+
+         <label class='slds-text-heading_medium'>Mode</label>
+      <input type="text" class='slds-input' name="Mode" onkeyup={handleactions}>
+      
+      <lightning-button label="Click Me" variant="brand" onclick={handleDynamicToast}></lightning-button>
+</div>
+</template>

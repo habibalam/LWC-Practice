@@ -1,0 +1,15 @@
+<template>
+    <lightning-card  title="EmployeeDetails">
+        <div class="slds-m-around_medium">
+          <p>Employee Name: {name}</p>
+          <p>Employee Age: {age}</p>
+          <p>Employee Salary: {salary}</p>
+          <p>Employee  Qualification :{qua}</p>
+          <lightning-input label="Enter Name" value={name} onchange={nameHandler}></lightning-input>
+          <lightning-input label="Enter age" value={age} onchange={ageHandler}></lightning-input>
+          <lightning-input label="Enter salary" value={salary} onchange={salHandler}></lightning-input>
+          <lightning-input label="Enter qualify" value={qua} onchange={quaHandler}></lightning-input>
+         
+        </div>    
+    </lightning-card>
+</template>

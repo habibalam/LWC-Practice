@@ -1,0 +1,24 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+   
+    <button class="slds-button slds-button_brand slds-m-top_medium" onclick={handleText}>Please click here</button>   
+   <template if:true={isshown}>
+    <table>
+        <tr>
+           <th>id</th>
+           <th>Name</th>
+           <th>Department</th>
+           <th>Age</th>
+    </tr>
+      <template for:each={myInfo} for:item="info" key={id}> 
+       <tr key={info.id}>
+         <td key={info.id}>{info.id}</td>
+         <td key={info.id}>{info.name}</td>
+         <td key={info.id}>{info.department}</td>
+         <td key={info.id}>{info.age}</td>
+        </tr>
+      </template>   
+    </table>
+</template>   
+</div>
+</template>

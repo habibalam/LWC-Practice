@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="subscriber">
+        <div class="slds-m-around_x-small">
+          <template if:true={showData}>
+              <template for:each={data.recordData} for:item="d">
+                <div class="slds-m-around_x-small" key={d.Id}>
+                    <p class="slds-p-around_small">{d.name}</p>
+                    <p class="slds-p-around_small">{d.email}</p>
+                    <p class="slds-p-around_small">{d.phone}</p>
+                </div>
+             </template> 
+          </template>
+
+        </div>
+    </lightning-card>
+
+
+</template>

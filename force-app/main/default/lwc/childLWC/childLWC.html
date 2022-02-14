@@ -1,0 +1,9 @@
+<template>
+   
+    <div class="slds-card slds-p-around_small">
+        <p class="slds-text-align_center">{pubValue}</p>
+        <template if:true={isShown}>
+           <p class="slds-text-align_center">Renderd contationally from parent</p>
+        </template>
+    </div>
+</template>

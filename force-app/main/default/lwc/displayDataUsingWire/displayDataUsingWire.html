@@ -1,0 +1,29 @@
+<template>
+    
+<lightning-card  variant="Narrow"  title="Display Account Ditails using wire" icon-name="standard:account">
+    <div style="padding: 10px;">
+        <table border="1">
+            <tr>
+                <th>Account Name</th>
+                <th>Industry</th>
+                <th>Type</th>
+                <th>Phone</th>
+                <th>Website</th>
+                <th>Image</th>
+              
+            </tr>
+    <template  for:each={data} for:item="account">
+       <tr key={account.Id}>
+            <td>{account.Name}</td>
+            <td>{account.Industry}</td>
+            <td>{account.Type}</td>
+            <td>{account.Phone}</td>
+            <td>{account.Website}</td>
+            <td>{<img src={account.Industry_Image__c} class="cstm-img" alt="image"/></td>
+            
+       </tr>
+    </template>
+    </table>
+    </div>
+</lightning-card>
+</template>

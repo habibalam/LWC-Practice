@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Opporturnity chart" icon-name="utility:chart">
+        <template if:true={chartConfig}>
+            <c-use-case-chart chart-config={chartConfig}></c-use-case-chart>
+        </template>
+    </lightning-card>
+</template>

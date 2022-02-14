@@ -1,0 +1,28 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Hello" icon-name="standard:account">
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+        <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+        <p slot="footer">Card Footer</p>
+    
+
+    <lightning-layout multiple-rows>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3" >
+            <div class="custom-box">
+                <lightning-input type="text" variant="standard" name="name" label="First Name" placeholder="type here..."></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <div class="custom-box">
+                <lightning-input type="text" variant="standard" name="name" label="Last Name" placeholder="type here..."></lightning-input>
+            </div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <div class="custom-box">3</div>
+        </lightning-layout-item>
+        <lightning-layout-item size="12" padding="around-small" small-device-size="3" medium-device-size="6" large-device-size="3">
+            <div class="custom-box">4</div>
+        </lightning-layout-item>
+    </lightning-layout> 
+    <lightning-button variant="brand" label="clickMe" title="titleName" onclick={handleClick}></lightning-button>
+</lightning-card>
+</template>

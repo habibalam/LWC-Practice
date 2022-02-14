@@ -1,0 +1,5 @@
+<apex:page>
+   <apex:pageBlock title="Navigation Vf page">
+       <apex:outputText>This is a custom page to Navigation into</apex:outputText>
+   </apex:pageBlock>
+</apex:page>

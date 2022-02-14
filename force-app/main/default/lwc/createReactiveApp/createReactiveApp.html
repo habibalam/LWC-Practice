@@ -1,0 +1,37 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+     <p class="slds-m-button_small">{randomText}</p>
+     <button class="slds-button slds-button_brand" onclick={handleTextChange}>
+         Change
+     </button>
+
+  <ul>
+     <template for:each={arr} for:item="arr1" key={index}>
+       <li key={index}>{arr1}</li>
+      </template>
+ </ul>
+
+      <button class="slds-button slds-button_brand" onclick={handleArrayChange}>
+          Alter Array
+      </button>
+
+
+    <ul>
+       <!-- <template for:each={myinfo} for:item="info" key={index}>
+          <li key={index}>{info}</li>
+         </template>-->
+        <p>{myinfo.id}</p>
+        <p>{myinfo.name}</p>
+        <p>{myinfo.dpet}</p>
+        <p>{myinfo.age}</p>
+       
+
+    </ul>
+    
+    <button class="slds-button slds-button_brand" onclick={handleArry}>
+      ClickMe
+    </button>
+
+    </div>
+    
+</template>

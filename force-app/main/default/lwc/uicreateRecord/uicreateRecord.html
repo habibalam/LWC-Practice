@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="create Record using Adaptors.." icond-name="standard:account">
+     <div class="slds-p-around_medium">
+      <lightning-input label="Account Name" name="name" onchange={handleChange} class="slds-p-around_small" >
+     </lightning-input>
+
+     <lightning-input label="phone" name="phone"  onchange={handleChange} class="slds-p-around_small">
+
+     </lightning-input>   
+
+     <lightning-input label="website" name="website"  onchange={handleChange} class="slds-p-around_small">
+
+    </lightning-input>   
+
+    <lightning-combobox label="Industry" name="Industry"  onchange={handleChange} class="slds-p-around_small"
+    options={options} value={industry}> </lightning-combobox>   
+
+    <lightning-button class="slds-m-around_medium" label="create Account" variant="brand" onclick={createAccount}>
+    
+    </lightning-button>
+    </div>
+    </lightning-card>
+
+</template>

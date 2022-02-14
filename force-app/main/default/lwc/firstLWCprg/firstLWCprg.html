@@ -1,0 +1,42 @@
+<template>
+    <div class="slds-card slds-p-around_medium">
+     <!--<p>{randomText}</p>-->
+     <!-- <h1 class="header">welcome back to salesforce</h1>
+      <br/>
+       <button class="slds-button slds-button_brand slds-m-top_large">
+         Click
+      </button>
+      <lightning-button label="Submit" title="submit" onclick={handleSubmit}><p>{randomText}</p></lightning-button>
+      <template if:true={ishow}>
+      <p class="slds-m-top_medium">
+        I'm {name}, I'm {age} Im from {origin}
+      </p> 
+      
+
+    </template>
+
+     <label class="slds-form-element__label">Name</label>
+     <input type="text" class="slds-input" onkeyup={trackChange} name="name"/>
+
+     <label class="slds-form-element__label">age</label>
+     <input type="text" class="slds-input" onkeyup={trackChange} name="age"/>
+
+     <label class="slds-form-element__label">Origin</label>
+     <input type="text" class="slds-input" onkeyup={trackChange} name="origin"/>
+    
+
+    <lightning-button label="Click Me" title="submit" onclick={handleEVent}>
+      
+    </lightning-button>-->
+   
+    <lightning-button label="Submit" title="submit" onclick={handleSubmit}>ry it</lightning-button>  
+    <template if:true={ishow}>    
+    <ul>
+    <template for:each= "{arr}" for:item= "text" key={index}>
+        <li key={index}>{text}</li>
+    </template>
+    </ul>
+  
+</template>
+</div>
+</template>

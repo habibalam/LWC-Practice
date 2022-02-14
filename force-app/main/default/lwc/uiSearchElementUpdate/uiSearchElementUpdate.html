@@ -1,0 +1,16 @@
+<template>
+  <lightning-card title='Accounts' icon-name="standard:account">
+     <lightning-layout multiple-row="true" vertical-align="end"> 
+    <lightning-input 
+    type="search"
+     onchange={handlekeyChange} class="slds-m-bottom_small" label="search" value={varName}>
+     </lightning-input>
+     <lightning-layout-item class="slds-p-around_small">
+
+        <lightning-button label='Search Account' variant="brand" onclick={handleSearchAccount}></lightning-button>
+     </lightning-layout-item>
+
+     </lightning-layout>
+ 
+</lightning-card>
+</template>

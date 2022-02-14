@@ -1,0 +1,34 @@
+<template>
+    <div class="slds-card  slds-p-around_medium">
+
+        <div class="slds-text-heading_medium slds-text-align_center">
+            Recordd id : {recordId}
+        </div>
+        <div class="slds-text-heading_medium slds-text-align_center">
+            Object Name : {objectApiName}
+        </div>
+
+        <lightning-button label="Show Toast" variant="brand" onclick={handleToast}></lightning-button>
+        <br/> <br/>
+
+     <label class='slds-text-heading_small'>Title</label>
+     <input type="text" class='slds-input' name="Title" onkeyup={handlekeyup}>
+
+     <label class='slds-text-heading_small'>Mesaage</label>
+     <input type="text" class='slds-input' name="Message" onkeyup={handlekeyup}>
+
+     <!--<label class='slds-text-heading_small' >Variant</label>
+     <input type="text" class='slds-input' name="variant" onkeyup={handlekeyup}>-->
+
+     <div class="slds-form-element__control">
+        <lightning-combobox  name="variant" label="Variant Type" value={variantDefaultValue}
+            placeholder="select variant" options={variantOptions} onchange={handlekeyup}>
+        </lightning-combobox>
+    </div>
+
+     <label class='slds-text-heading_small'>Mode</label>
+     <input type="text" class='slds-input' name="Mode" onkeyup={handlekeyup}>
+    
+     <lightning-button label="Daynamic Toast" variant="brand" onclick={handleDynamicToast}></lightning-button>
+  </div>    
+</template>

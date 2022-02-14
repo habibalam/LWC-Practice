@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="LMS Handson" icon-name="standard:account">
+        <div class="slds-size_3-of-3"> 
+         <div class="slds-box slds-box_x-small slds-text-align_center slds-m-around_x-small">
+        <div class="slds-m-around_x-small slds-grid">
+         <lightning-input type="hidden"  name="name"  style="width: 30%;">
+          </lightning-input>
+
+           <lightning-input type="text" label="Contact Name" name="id"  onchange={handleChange} placeholder="Contact.." style="width: 30%;">
+           </lightning-input>
+    
+        <lightning-button class="slds-m-around_medium" variant="brand" label="Search"
+        onclick={handlePublish}></lightning-button>
+     
+        </div>
+        </div>
+       </div> 
+        </lightning-card>
+</template>
